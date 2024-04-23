@@ -22,7 +22,7 @@ class AuthRepo extends RepoAbstract {
   Future<ApiResponse> login(UserModel c) async {
     try {
       Response response = await dioClient.post(
-        BaseUrls.productionAPi + BaseUrls.login,
+        'https://fakestoreapi.com/auth/login',
         data: c.toJson(),
       );
       return ApiResponse.withSuccess(response);

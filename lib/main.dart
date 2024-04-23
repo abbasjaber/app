@@ -1,4 +1,4 @@
-import 'package:app/pages/homePage.dart';
+import 'package:app/pages/home_page.dart';
 import 'package:app/remote/providers/auth_provider.dart';
 import 'package:app/remote/providers/example_provider.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ void main() async {
   await di.init();
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => di.sl<AuthProvider>()),
-    ChangeNotifierProvider(create: (context) => di.sl<ExamoleProvider>()),
+    ChangeNotifierProvider(create: (context) => di.sl<ExampleProvider>()),
   ], child: const MyApp()));
 }
 

@@ -5,15 +5,14 @@ import 'package:app/remote/response/api_response.dart';
 
 import 'package:dio/dio.dart';
 
-class ExamoleRepo extends RepoAbstract {
+class ExampleRepo extends RepoAbstract {
   final DioClient dioClient;
   Response? response;
-  ExamoleRepo({required this.dioClient});
+  ExampleRepo({required this.dioClient});
   @override
   Future<ApiResponse> get() async {
     try {
-      response =
-          await dioClient.get("http://depotlink.co/jsontest/itemstree.json");
+      response = await dioClient.get("https://fakestoreapi.com/products");
       return ApiResponse.withSuccess(response!);
     } catch (e) {
       return ApiResponse.withError(ApiErrorHandler.getMessage(e));

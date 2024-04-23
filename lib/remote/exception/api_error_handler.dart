@@ -70,7 +70,6 @@ class ApiErrorHandler {
     } else {
       errorDescription = "is not a subtype of exception";
     }
-    print(errorDescription);
     return tr(errorDescription);
   }
 }

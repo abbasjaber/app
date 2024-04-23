@@ -25,11 +25,11 @@ Future<void> init() async {
   sl.registerLazySingleton(
       () => AuthRepo(dioClient: sl(), sharedPreferences: sl()));
 
-  sl.registerLazySingleton(() => ExamoleRepo(dioClient: sl()));
+  sl.registerLazySingleton(() => ExampleRepo(dioClient: sl()));
 
   // Providers
   sl.registerFactory(() => AuthProvider(authRepo: sl()));
-  sl.registerFactory(() => ExamoleProvider(examoleRepo: sl()));
+  sl.registerFactory(() => ExampleProvider(examoleRepo: sl()));
 
   // External
   final sharedPreferences = await SharedPreferences.getInstance();
